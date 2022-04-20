@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="container">
+    <image wx:if="{{logo}}" src="../../image/0.png" style="width:310px;top:5px" mode="widthFix"></image>
+    <view wx:else style="height: 50px;"></view>
+</view>
+<view class="container" style="height:325px;position:relative;" catchtouchstart="touchStart" catchtouchend="touchEnd" catchtouchmove="touchMove">
+    <view class="bg" style="overflow:hidden;">
+        <view class="bg-frame" style="width:{{height*rate}}px;height:{{height}}px;top:{{CenterY}}px;left:{{CenterX}}px">
+            <image class="bg-body" src="{{bgPic}}" mode="widthFix"></image>
+        </view>
+    </view>
+    <image class="cover" id='bg' src="../../image/{{currentId}}.png" style="top:{{kCenterY+'px'}};left:{{kCenterX+'px'}}"></image>
+</view>
+<view class="slide">
+    <view style="padding:8px;font-size:18px;">图像大小</view>
+    <slider class="body-slide" min="0.5" max="2" step="0.01" value="1" block-size="20" backgroundColor="{{slideColor[1]}}" activeColor="{{slideColor[0]}}" catchchanging="changeScale"></slider>
+</view>
+<view>
+    <scroll-view class="scrollView" scroll-x="true">
+        <image class="imgList" wx:for="{{piclist}}" wx:key="this" src="../../image/{{index+1}}.png" data-id="{{index+1}}" bindtap="draw"></image>
+    </scroll-view>
+    <view style="height: 20px;"></view>
+    <button bindtap="savePic">确定</button>
+</view>

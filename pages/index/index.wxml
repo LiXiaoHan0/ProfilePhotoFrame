@@ -1,0 +1,15 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  <image wx:if="{{logo}}" src="../../image/0.png" style="width:300px;top:5px" mode="widthFix"></image>
+  <view wx:else style="height: 50px;"></view>
+</view>
+<view class="container">
+  <image class="bgPic" mode="aspectFit" wx:if="{{bgPic}}" src="{{bgPic}}" bindload="finish"></image>
+  <view class="emptybg" wx:else></view>
+</view>
+<view>
+  <button wx:if="{{canIUseGetUserProfile}}" bindtap="getAvatar">读取原头像</button>
+  <!-- <button data-way="camera" bind:tap="chooseImage">使用相机</button> -->
+  <button data-way="album" bindtap="chooseImage">相册中选择</button>
+  <button bindtap="nextPage" disabled="{{!picChoosed}}">下一步</button>
+</view>

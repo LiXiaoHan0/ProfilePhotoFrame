@@ -1,0 +1,44 @@
+.bg,.bg-frame{
+  position: absolute;
+  z-index:0;
+  height: 300px;
+  width:300px;
+  background-color: white;
+}
+.bg-body{
+  height: 100%;
+  width: 100%;
+}
+.cover{
+  box-sizing: border-box;
+  position:absolute;
+  z-index:0;
+  height: 300px;
+  width:300px;
+  border: 3px solid var(--line1);
+  box-shadow:2px 2px var(--shadow);
+}
+.slide{
+  width: 100%;
+  color:var(--word);
+  background-color: var(--back);
+  display: flex;
+  justify-content: center;
+}
+.body-slide{
+  width: 50%;
+}
+.scrollView{
+   width: 100%; 
+   position:relative;
+   top:20px;
+   white-space: nowrap;
+   background:var(--back);
+}
+.imgList{
+  height: 70px;
+  width: 70px;
+  border:2px solid var(--line2);
+  background-color: #ffffff;
+  margin: 10px;
+}

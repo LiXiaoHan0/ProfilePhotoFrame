@@ -1,0 +1,6 @@
+<view class="container">
+    <image wx:if="{{logo}}" src="../../image/0.png" style="width:310px;top:5px" mode="widthFix"></image>
+    <view wx:else style="height: 50px;"></view>
+</view>
+<canvas type="2d" class="canvas" id="canvas" style="left:{{loc-150+'px'}}"></canvas>
+<button bindtap="savePic">保存至相册</button>
