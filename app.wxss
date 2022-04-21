@@ -1,10 +1,10 @@
 /**app.wxss**/
 page{
-  background-color:#ffffff;  /* 背景颜色 */
-  background-image: url(data:image/jpeg;base64,/9j/2wCEAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQECAgICAgICAgICAgMDAwMDAwMDAwMBAQEBAQEBAgEBAgICAQICAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA//dAAQABf/uAA5BZG9iZQBkwAAAAAH/wAARCAAoACgDABEAAREBAhEB/8QAZQAAAgMBAAAAAAAAAAAAAAAABwoBBAUGAQEAAAAAAAAAAAAAAAAAAAAAEAABAwIEAwkBAAAAAAAAAAABAgMRBBIABSExQVFxExQVIjNCU2GSwREBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAAABEQIRAD8Af4wGVmuasZWxeuFvLBDLIPmWrmd7UJnU8OsAgNfFq7v3iHbHvE/fZ9nPo2T6P1vOszrgCVlWasZoxeiEPIADzJPmQrmNrkKjQ8esgBq4D//QfjzXNWMrYvXC3lghlkHzLVzO9qEzqeHWAQFtXVv1r66ioXe4v8oTwQga2oTOg/skhWwFmkq36J9FRTrscR+Vp4oWNLkKjUf2CAKWVZqxmjF6IQ8gAPMk+ZCuY2uQqNDx6yAH/9F5Grq3619dRULvcX+UJ4IQNbUJnQf2SQrYDR8Jru4+Idie7z99p2cetZHo/e8axGuAzsBZpKt+ifRUU67HEflaeKFjS5Co1H9ggP/SeIwHW5BkBqiisrERTCFMsqGr54LWPh5D3dNwINqbbYFsRbGkco5YAfZ/kBpSuso0TTGVPMpGrB4rQPh5j29Ng5LAf//Te1yDIDVFFZWIimEKZZUNXzwWsfDyHu6bgQgAAAAAAIAGwGAnAQQCCCAQRBB2IwA9z/IDSldZRommMqeZSNWDxWgfDzHt6bB//9k=);  /* 背景纹理 */
-  --line1:#000000; /* 头像效果边框颜色 */
-  --line2:#ffffff; /* 待选择头像框边框颜色 */
-  --shadow:#aaaaaa; /* 阴影颜色 */
+  background-color:#ffffff;  /* 页面背景颜色 */
+  background-image: url(data:image/jpeg;base64,/9j/2wCEAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQECAgICAgICAgICAgMDAwMDAwMDAwMBAQEBAQEBAgEBAgICAQICAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA//dAAQABf/uAA5BZG9iZQBkwAAAAAH/wAARCAAoACgDABEAAREBAhEB/8QAZQAAAgMBAAAAAAAAAAAAAAAABwoBBAUGAQEAAAAAAAAAAAAAAAAAAAAAEAABAwIEAwkBAAAAAAAAAAABAgMRBBIABSExQVFxExQVIjNCU2GSwREBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAAABEQIRAD8Af4wGVmuasZWxeuFvLBDLIPmWrmd7UJnU8OsAgNfFq7v3iHbHvE/fZ9nPo2T6P1vOszrgCVlWasZoxeiEPIADzJPmQrmNrkKjQ8esgBq4D//QfjzXNWMrYvXC3lghlkHzLVzO9qEzqeHWAQFtXVv1r66ioXe4v8oTwQga2oTOg/skhWwFmkq36J9FRTrscR+Vp4oWNLkKjUf2CAKWVZqxmjF6IQ8gAPMk+ZCuY2uQqNDx6yAH/9F5Grq3619dRULvcX+UJ4IQNbUJnQf2SQrYDR8Jru4+Idie7z99p2cetZHo/e8axGuAzsBZpKt+ifRUU67HEflaeKFjS5Co1H9ggP/SeIwHW5BkBqiisrERTCFMsqGr54LWPh5D3dNwINqbbYFsRbGkco5YAfZ/kBpSuso0TTGVPMpGrB4rQPh5j29Ng5LAf//Te1yDIDVFFZWIimEKZZUNXzwWsfDyHu6bgQgAAAAAAIAGwGAnAQQCCCAQRBB2IwA9z/IDSldZRommMqeZSNWDxWgfDzHt6bB//9k=);  /* 页面背景纹理 */
+  --line1:#000000; /* 头像效果框边框颜色 */
+  --line2:#ffffff; /* 可选头像框边框颜色 */
+  --shadow:#aaaaaa; /* 头像效果框投影颜色 */
   --word:#ffffff; /* 滑动条文字颜色 */
   --back:#000000; /* 滑动条背景颜色 */
 }
@@ -16,12 +16,12 @@ button{
   background-color: #000000; /* 按钮背景颜色 */
 }
 .button-hover{
-  color: #aaaaaa; /* 点击文字颜色 */
-  background-color: #333333; /* 点击按钮颜色 */
+  color: #aaaaaa; /* 点击时按钮文字颜色 */
+  background-color: #333333; /* 点击时按钮背景颜色 */
 }
 button[disabled]{
-  color: #aaaaaa !important; /* 禁用按钮文字颜色 */
-  background-color: #cccccc !important; /* 禁用按钮背景颜色 */
+  color: #aaaaaa !important; /* 禁用时按钮文字颜色 */
+  background-color: #cccccc !important; /* 禁用时按钮背景颜色 */
 }
 
 /* 元素容器 */
