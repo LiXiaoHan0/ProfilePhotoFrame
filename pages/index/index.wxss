@@ -4,6 +4,7 @@
 .bgPic,.emptybg{
   height:300px;
   width:300px;
+  box-sizing: border-box;
   background-color: white;
   border: 3px solid var(--line1);
   box-shadow:2px 2px var(--shadow);

@@ -1,9 +1,14 @@
 .bg,.bg-frame{
+  box-sizing: border-box;
   position: absolute;
   z-index:0;
   height: 300px;
   width:300px;
   background-color: white;
+}
+.bg{
+  border: 3px solid var(--line1);
+  box-shadow:2px 2px var(--shadow);
 }
 .bg-body{
   height: 100%;
@@ -15,8 +20,6 @@
   z-index:0;
   height: 300px;
   width:300px;
-  border: 3px solid var(--line1);
-  box-shadow:2px 2px var(--shadow);
 }
 .slide{
   width: 100%;

@@ -8,8 +8,10 @@ App({
   },
   globalData: {
     logo: true, // 是否使用logo
-    picnum:5, // 可选头像框数量
-    slideColor: ['#ffffff','#aaaaaa'], // 滑动条颜色
+    picnum:4, // 可选头像框数量
+    cloud:true, // 是否进行云端统计
+    cloudid:"0ab5303b6273a3520190ada07fb2eba4", // 云端数据库字段id
+    slideColor: ['#ffffff','#999999'], // 滑动条颜色
 
     bgPic: null, // 头像图片地址
     center_x: 0, // 图片平移x距离

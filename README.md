@@ -29,6 +29,8 @@
 | logo       | Boolean  | 是否使用logo。若为true则在image文件夹中应存在0.png   |
 | picnum     | Number   | 可选头像框数量。取值应与image文件夹中n.png的数量对应 |
 | slideColor | Array(2) | 第二页中滑动条颜色。两项分别为已选择颜色与背景条颜色 |
+| cloud      | Boolean  | 是否使用云端统计功能                                 |
+| cloudid    | String   | 微信云开发数据库_id。数据库字段为n                   |
 
 #### 3.app.json：
 

@@ -89,7 +89,20 @@ Page({
     app.globalData.center_y = this.center_y
     app.globalData.currentId = this.data.currentId
     app.globalData.scale = this.scale
-    console.log(app.globalData)
+    const data0=app.globalData
+    if(data0.cloud){
+      wx.cloud.init().then(()=>{
+        const db = wx.cloud.database()
+        db.collection('statistics').doc(data0.cloudid).update({
+          data: {
+            [data0.currentId]: db.command.inc(1)
+          },
+          success: function(res) {
+            console.log(res)
+          }
+        })
+      })
+    }
     wx.navigateTo({
       url: '../combine/combine',
     })
