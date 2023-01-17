@@ -8,8 +8,6 @@
   <view class="emptybg" wx:else></view>
 </view>
 <view>
-  <button wx:if="{{canIUseGetUserProfile}}" bindtap="getAvatar">读取原头像</button>
-  <!-- <button data-way="camera" bind:tap="chooseImage">使用相机</button> -->
-  <button data-way="album" bindtap="chooseImage">相册中选择</button>
+  <button open-type="chooseAvatar" bind:chooseavatar="chooseImage">读取图片</button>
   <button bindtap="nextPage" disabled="{{!picChoosed}}">下一步</button>
 </view>

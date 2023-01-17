@@ -40,17 +40,15 @@
     },
     "compileType": "miniprogram",
     "libVersion": "2.23.4",
-    "appid": "wx5add97914b459c8d",
-    "projectname": "%E5%A4%B4%E5%83%8F%E6%A1%86%E5%B0%8F%E7%A8%8B%E5%BA%8F",
-    "condition": {
-        "search": {
-            "list": []
-        },
-        "conversation": {
-            "list": []
-        },
-        "miniprogram": {
-            "list": []
-        }
+    "appid": "你自己的appid",
+    "projectname": "头像框小程序",
+    "condition": {},
+    "packOptions": {
+        "ignore": [],
+        "include": []
+    },
+    "editorSetting": {
+        "tabIndent": "insertSpaces",
+        "tabSize": 4
     }
 }
