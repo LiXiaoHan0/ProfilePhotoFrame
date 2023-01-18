@@ -6,7 +6,7 @@
   width:300px;
   background-color: white;
 }
-.bg{
+.bg-line{
   border: 3px solid var(--line1);
   box-shadow:2px 2px var(--shadow);
 }

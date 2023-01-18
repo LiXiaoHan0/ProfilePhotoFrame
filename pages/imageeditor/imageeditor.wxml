@@ -9,7 +9,7 @@
             <image class="bg-body" src="{{bgPic}}" mode="widthFix"></image>
         </view>
     </view>
-    <image class="cover" id="bg" src="../../image/{{currentId}}.png" style="top:{{kCenterY+'px'}};left:{{kCenterX+'px'}}"></image>
+    <image class="cover bg-line" id="bg" src="../../image/{{currentId}}.png" style="top:{{kCenterY+'px'}};left:{{kCenterX+'px'}}"></image>
 </view>
 <view class="slide">
     <view style="padding:8px;font-size:18px;">图像大小</view>

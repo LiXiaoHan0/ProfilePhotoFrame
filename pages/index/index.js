@@ -12,7 +12,7 @@ Page({
             logo: app.globalData.logo
         })
     },
-    assignPicChoosed() { //设置图片选择
+    assignPicChoosed() { // 设置图片选择
         if (this.data.bgPic) {
             this.setData({
                 picChoosed: true
@@ -23,8 +23,8 @@ Page({
             })
         }
     },
-    chooseImage(e) { //选择图片
-        console.log(e)
+    chooseImage(e) { // 选择图片
+        // 普通方案，头像不清晰
         const {
             avatarUrl
         } = e.detail
@@ -39,25 +39,48 @@ Page({
                 title: '读取失败',
                 icon: 'error'
             })
-            console.log(res)
         }
+
+        // 备选方案
+        // wx.chooseMedia({
+        //     count: 1,
+        //     mediaType: ['image'],
+        //     sourceType: ['album', 'camera'],
+        //     sizeType:['original'],
+        //     success: res => {
+        //         const avatarUrl = res.tempFiles[0].tempFilePath
+        //         console.log(avatarUrl)
+        //         if (avatarUrl) {
+        //             this.setData({
+        //                 bgPic: avatarUrl
+        //             });
+        //             this.assignPicChoosed();
+        //         } else {
+        //             this.assignPicChoosed();
+        //             wx.showToast({
+        //                 title: '读取失败',
+        //                 icon: 'error'
+        //             })
+        //         }
+        //     }
+        // })
     },
-    nextPage() { //进入下一页
+    nextPage() { // 进入下一页
         app.globalData.bgPic = this.data.bgPic;
         wx.navigateTo({
             url: '../imageeditor/imageeditor',
         })
     },
-    onShareAppMessage: function (options) { //分享
-        return {
-            path: 'pages/index/index',
-            imageUrl: '/image/x.png'
-        }
-    },
-    onShareTimeline() { //转发朋友圈
-        return {
-            query: 'pages/index/index',
-            imageUrl: '/image/x.png'
-        }
-    }
+    // onShareAppMessage: function (options) { // 分享
+    //     return {
+    //         path: 'pages/index/index',
+    //         imageUrl: '/image/x.png'
+    //     }
+    // },
+    // onShareTimeline() { // 转发朋友圈
+    //     return {
+    //         query: 'pages/index/index',
+    //         imageUrl: '/image/x.png'
+    //     }
+    // }
 })

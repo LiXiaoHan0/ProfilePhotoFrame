@@ -1,13 +1,17 @@
 <!--pages/index/index.wxml-->
 <view class="container">
-  <image wx:if="{{logo}}" src="../../image/0.png" style="width:300px;top:5px" mode="widthFix"></image>
-  <view wx:else style="height: 50px;"></view>
+    <image wx:if="{{logo}}" src="../../image/0.png" style="width:300px;top:5px" mode="widthFix"></image>
+    <view wx:else style="height: 50px;"></view>
 </view>
 <view class="container">
-  <image class="bgPic" mode="aspectFit" wx:if="{{bgPic}}" src="{{bgPic}}" bindload="finish"></image>
-  <view class="emptybg" wx:else></view>
+    <image class="bgPic" mode="aspectFit" wx:if="{{bgPic}}" src="{{bgPic}}" bindload="finish"></image>
+    <view class="emptybg" wx:else></view>
 </view>
 <view>
-  <button open-type="chooseAvatar" bind:chooseavatar="chooseImage">读取图片</button>
-  <button bindtap="nextPage" disabled="{{!picChoosed}}">下一步</button>
+    <!-- 普通方案 -->
+    <button open-type="chooseAvatar" bind:chooseavatar="chooseImage">读取图片</button>
+    
+    <!-- 备选方案 -->
+    <!-- <button bindtap="chooseImage">读取图片</button> -->
+    <button bindtap="nextPage" disabled="{{!picChoosed}}">下一步</button>
 </view>
