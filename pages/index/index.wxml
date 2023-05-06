@@ -9,9 +9,9 @@
 </view>
 <view>
     <!-- 普通方案 -->
-    <button open-type="chooseAvatar" bind:chooseavatar="chooseImage">读取图片</button>
+    <!-- <button open-type="chooseAvatar" bind:chooseavatar="chooseImage">读取图片</button> -->
     
     <!-- 备选方案 -->
-    <!-- <button bindtap="chooseImage">读取图片</button> -->
+    <button bindtap="chooseImage">读取图片</button>
     <button bindtap="nextPage" disabled="{{!picChoosed}}">下一步</button>
 </view>

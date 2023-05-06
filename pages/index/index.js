@@ -25,45 +25,45 @@ Page({
     },
     chooseImage(e) { // 选择图片
         // 普通方案，头像不清晰
-        const {
-            avatarUrl
-        } = e.detail
-        if (avatarUrl) {
-            this.setData({
-                bgPic: avatarUrl
-            });
-            this.assignPicChoosed();
-        } else {
-            this.assignPicChoosed();
-            wx.showToast({
-                title: '读取失败',
-                icon: 'error'
-            })
-        }
+        // const {
+        //     avatarUrl
+        // } = e.detail
+        // if (avatarUrl) {
+        //     this.setData({
+        //         bgPic: avatarUrl
+        //     });
+        //     this.assignPicChoosed();
+        // } else {
+        //     this.assignPicChoosed();
+        //     wx.showToast({
+        //         title: '读取失败',
+        //         icon: 'error'
+        //     })
+        // }
 
         // 备选方案
-        // wx.chooseMedia({
-        //     count: 1,
-        //     mediaType: ['image'],
-        //     sourceType: ['album', 'camera'],
-        //     sizeType:['original'],
-        //     success: res => {
-        //         const avatarUrl = res.tempFiles[0].tempFilePath
-        //         console.log(avatarUrl)
-        //         if (avatarUrl) {
-        //             this.setData({
-        //                 bgPic: avatarUrl
-        //             });
-        //             this.assignPicChoosed();
-        //         } else {
-        //             this.assignPicChoosed();
-        //             wx.showToast({
-        //                 title: '读取失败',
-        //                 icon: 'error'
-        //             })
-        //         }
-        //     }
-        // })
+        wx.chooseMedia({
+            count: 1,
+            mediaType: ['image'],
+            sourceType: ['album', 'camera'],
+            sizeType:['original'],
+            success: res => {
+                const avatarUrl = res.tempFiles[0].tempFilePath
+                console.log(avatarUrl)
+                if (avatarUrl) {
+                    this.setData({
+                        bgPic: avatarUrl
+                    });
+                    this.assignPicChoosed();
+                } else {
+                    this.assignPicChoosed();
+                    wx.showToast({
+                        title: '读取失败',
+                        icon: 'error'
+                    })
+                }
+            }
+        })
     },
     nextPage() { // 进入下一页
         app.globalData.bgPic = this.data.bgPic;

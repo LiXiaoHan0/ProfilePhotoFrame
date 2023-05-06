@@ -39,7 +39,7 @@
         "ignoreUploadUnusedFiles": true
     },
     "compileType": "miniprogram",
-    "libVersion": "2.23.4",
+    "libVersion": "2.30.4",
     "appid": "你自己的appid",
     "projectname": "头像框小程序",
     "condition": {},
