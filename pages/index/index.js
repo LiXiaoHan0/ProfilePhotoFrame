@@ -67,6 +67,12 @@ Page({
     },
     nextPage() { // 进入下一页
         app.globalData.bgPic = this.data.bgPic;
+        wx.getImageInfo({
+            src: this.data.bgPic,
+            success: res => {
+                app.globalData.rate = res.width / res.height
+            } 
+        })
         wx.navigateTo({
             url: '../imageeditor/imageeditor',
         })

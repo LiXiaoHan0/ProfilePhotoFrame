@@ -82,7 +82,7 @@ Page({
       height: s * app.globalData.height,
     })
     this.scale = s
-    console.log(this.data.scale)
+    console.log(this.scale)
   },
   savePic() {
     app.globalData.center_x = this.center_x
